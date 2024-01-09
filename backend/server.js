@@ -17,7 +17,7 @@ const CHAT_API_KEY=process.env.CHAT_API_KEY
 
 
 app.use(cors({
-  origin:['https://portfolio-frontend-iota-three.vercel.app'],
+  origin:['https://portfolio2-frontend.vercel.app'],
   methods:['POST','GET'],
   credentials:true
 }))
