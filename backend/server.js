@@ -4,7 +4,6 @@ const cors = require('cors');
 const path = require("path");
 const zlib = require('zlib');
 
-require('dotenv').config({ path: './.env' });
 const axios = require('axios');
 
 const app=express()
@@ -13,8 +12,16 @@ const port = 4000
 app.use(express.json());
 app.use(cors())
 
-const {HUGGING_FACE_API}=process.env
-const {CHAT_API_KEY}=process.env
+const HUGGING_FACE_API=process.env.HUGGING_FACE_API
+const CHAT_API_KEY=process.env.CHAT_API_KEY
+
+
+app.use(cors({
+  origin:['https://portfolio-frontend-iota-three.vercel.app'],
+  methods:['POST','GET'],
+  credentials:true
+}))
+
 
 app.get("/",(req,res)=>{
   res.send("Server is running")
