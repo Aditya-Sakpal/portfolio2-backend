@@ -10,7 +10,6 @@ const app=express()
 const port = 4000
   
 app.use(express.json());
-app.use(cors())
 
 const HUGGING_FACE_API=process.env.HUGGING_FACE_API
 const CHAT_API_KEY=process.env.CHAT_API_KEY
