@@ -16,7 +16,7 @@ const CHAT_API_KEY=process.env.CHAT_API_KEY
 
 
 app.use(cors({
-  origin:['https://portfolio2-frontend.vercel.app'],
+  origin:['https://giga-coder-techfolio.vercel.app'],
   methods:['POST','GET'],
   credentials:true
 }))
